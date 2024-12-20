@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Trading Card Game Demo</title>
+    <style>
+        body { font-family: sans-serif; }
+        .card {
+            border: 1px solid #333;
+            padding: 8px;
+            margin: 8px;
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+        }
+        .card h4 {
+            margin: 4px 0;
+        }
+        .card p {
+            margin: 2px 0;
+            font-size: 14px;
+        }
+        #inventory, #deck, #hand {
+            margin-bottom: 20px;
+        }
+        #battle-area {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trading Card Game Demo</h1>
+
+    <div>
+        <button id="obtain-card">Obtain Random Library Card</button>
+    </div>
+
+    <h2>Your Inventory</h2>
+    <div id="inventory"></div>
+
+    <h2>Your Deck</h2>
+    <div id="deck"></div>
+
+    <div>
+        <h3>Add a Card to Deck</h3>
+        <input type="text" id="card-id-input" placeholder="Card ID"/>
+        <button id="add-to-deck">Add to Deck</button>
+    </div>
+
+    <h2>Your Hand</h2>
+    <div id="hand"></div>
+    <button id="draw-card-button">Draw Card</button>
+
+    <div id="battle-area">
+        <h2>Battle</h2>
+        <p>Select two cards from your deck to battle:</p>
+        <input type="text" id="card1-id" placeholder="Card ID 1"/>
+        <input type="text" id="card2-id" placeholder="Card ID 2"/>
+        <button id="battle-button">Fight!</button>
+        <div id="battle-result"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
